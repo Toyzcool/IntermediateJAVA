@@ -2,7 +2,6 @@ package com.File;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -53,6 +52,7 @@ public class readAndWrite {
 			for (byte b : bis) {
 				System.out.print(" "+ b);
 			}
+			fis2.close();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

@@ -1,7 +1,6 @@
 package com.File;
 
 import java.io.File;
-import java.io.IOException;
 
 public class FileIO {
 
@@ -12,6 +11,7 @@ public class FileIO {
 		//判断文件是否存在
 		System.out.println("文件是否存在："+f.exists());
 		//新建文件
+		@SuppressWarnings("unused")
 		File f1 = new File(f,"/Users/toyz/eclipse-workspace/1.rtf");
 	}
 
