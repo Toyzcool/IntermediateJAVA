@@ -24,20 +24,20 @@ public class TestThread {
 		/*
 		 * 多线程攻击方法一,继承Thread类——KillThread.java
 		 */
-//		System.out.println("-----以下为多线程 攻击方法一-----");
-//		KillThread kt1 = new KillThread(gailun, vn);
-//		kt1.start();
-//		KillThread kt2 = new KillThread(ez, jinx);
-//		kt2.start();
+		System.out.println("-----以下为多线程 攻击方法一-----");
+		KillThread kt1 = new KillThread(gailun, vn);
+		kt1.start();
+		KillThread kt2 = new KillThread(ez, jinx);
+		kt2.start();
 		
 		/*
 		 * 多线程攻击方法二，使用Runnable接口——Battle.java
 		 */
-//		System.out.println("-----以下为多线程 攻击方法二-----");
-//		Battle b1 = new Battle(gailun,vn);
-//		new Thread(b1).start();
-//		Battle b2 = new Battle(ez,jinx);
-//		new Thread(b2).start();
+		System.out.println("-----以下为多线程 攻击方法二-----");
+		Battle b1 = new Battle(gailun,vn);
+		new Thread(b1).start();
+		Battle b2 = new Battle(ez,jinx);
+		new Thread(b2).start();
 		
 		/*
 		 * 多线程攻击方法三，使用匿名类
