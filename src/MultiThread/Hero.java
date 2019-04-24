@@ -14,6 +14,12 @@ public class Hero {
 		this.hp = hp;
 		this.damage = damage;
 	}
+	public Hero(String name, float hp) {
+		super();
+		this.name = name;
+		this.hp = hp;
+	}
+	
 	//新建英雄攻击方法
 	public void attackHero(Hero h) {
 		try {
@@ -32,5 +38,14 @@ public class Hero {
 	//新建英雄死亡判断方法
 	public boolean isDead() {
 		return 0 >= hp?true:false;
+	}
+	
+	//新建英雄伤害方法——Synchronized.java
+	public synchronized void hurt() {
+		this.hp -= 1 ;
+	}
+	//新建英雄回血方法——Synchronized.java
+	public synchronized void recover() {
+		this.hp += 1 ;
 	}
 }
