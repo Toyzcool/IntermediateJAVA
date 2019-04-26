@@ -48,4 +48,34 @@ public class Hero {
 	public synchronized void recover() {
 		this.hp += 1 ;
 	}
+	
+	//新建英雄掉血方法，需要暂停占用——WaitAndNotify.java
+	public synchronized void hurtWait() {
+		//当血量为1时，暂停占用掉血方法
+		if(hp == 1) {
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		hp -= 1;
+		System.out.println("掉血，目前血量："+hp);
+	}
+	
+	//新建英雄回血方法，回血后通知其他进程已回血完毕——WaitAndNotify.java
+	public synchronized void recoverNotify() {
+		hp += 1;
+		this.notify();
+		System.out.println("回血，目前血量："+hp);
+	}
 }
+
+
+
+
+
+
+
+
