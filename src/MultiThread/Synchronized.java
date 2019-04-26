@@ -1,16 +1,11 @@
 package MultiThread;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 /*
  * Concurrency 问题使用synchronized()方法解决——Hero.java中的hurt()和recover()方法
  */
 public class Synchronized {
 
 	public static void main(String[] args) {
-		//用于使用synchronized对象
-		final Object someObject = new Object();
 		
 		//新建英雄对象
 		Hero hero = new Hero("VN",10000);
