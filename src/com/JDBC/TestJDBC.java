@@ -2,6 +2,7 @@ package com.JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -31,6 +32,24 @@ public class TestJDBC {
 			String sql = "insert into hero values(null,'诺克萨斯',900,120)";
 			s.execute(sql);
 			System.out.println("数据写入成功");
+			
+			/*
+			 * 查询
+			 */
+			String sqlSearch = "select * from hero";
+			//执行sql语句，返回查询结果
+			ResultSet rs = s.executeQuery(sqlSearch);
+			System.out.println("ID\tName\tHp\tDamage\t");
+			while(rs.next()) {
+				//获取ID
+				int id = rs.getInt("id");
+				//获取name
+				String name = rs.getString(2);
+				//获取hp和damage
+				float hp = rs.getFloat(3);
+				int damage = rs.getInt("damage");
+				System.out.printf("%d\t%s\t%.0f\t%d%n",id,name,hp,damage);
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
