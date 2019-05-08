@@ -2,6 +2,7 @@ package com.File;
 
 import java.io.Serializable;
 
+@SuppressWarnings("serial")
 public class Hero implements Serializable {
 	public String name;
 	public int hp;

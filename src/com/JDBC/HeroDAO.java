@@ -151,6 +151,7 @@ public class HeroDAO implements DAO {
 
 	//分页输出列表中hero对象
 	public List<Hero> list(int start,int count) {
+		@SuppressWarnings({ "rawtypes", "unchecked" })
 		List<Hero> heros = new ArrayList();
 		String sql = "select * from hero order by id desc limit ? , ?";
 		try (

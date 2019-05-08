@@ -12,6 +12,7 @@ import java.io.ObjectOutputStream;
 /*
  * 与Hero类关联
  */
+@SuppressWarnings("unused")
 public class ObjectRead {
 
 	public static void main(String[] args) {

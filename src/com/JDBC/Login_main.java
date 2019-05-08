@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Login_main {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner console = new Scanner(System.in);
 		try {

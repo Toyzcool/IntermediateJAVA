@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
+@SuppressWarnings("unused")
 public class NewPreparedStatement {
 
 	public static void main(String[] args) {
