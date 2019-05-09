@@ -1,7 +1,7 @@
 package com.GUI;
 
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -30,12 +30,7 @@ public class TestKeyListener {
 		frame.add(lab);
 		
 		//监听键盘动作
-		frame.addKeyListener(new KeyListener() {
-			@Override
-			public void keyTyped(KeyEvent e) {
-				
-			}
-			
+		frame.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
 				switch (e.getKeyCode()) {
@@ -58,10 +53,6 @@ public class TestKeyListener {
 				}
 			}
 
-			@Override
-			public void keyPressed(KeyEvent e) {
-				
-			}
 		});
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
