@@ -9,7 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.cj.xdevapi.PreparableStatement;
+import com.Practice.UserManageSystem.*;
+
 
 /*
  * 实现DAO中的方法
@@ -151,7 +152,7 @@ public class UserDAO implements Dao{
 			c.setAutoCommit(false);
 			ps.setInt(1, start);
 			ps.setInt(2, count);
-			ResultSet rs = ps.executeQuery(sql);
+			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				//将获取到的数据库中的user数据赋值给user对象
 				User user = new User();
