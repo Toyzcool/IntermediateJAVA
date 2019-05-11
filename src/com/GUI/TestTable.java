@@ -29,6 +29,7 @@ public class TestTable {
 		JScrollPane sp = new JScrollPane();
 		sp.setViewportView(table);
 		frame.add(sp,BorderLayout.CENTER);
+		table.getColumnModel().getColumn(0).setPreferredWidth(10);
 		
 		//窗体设置
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

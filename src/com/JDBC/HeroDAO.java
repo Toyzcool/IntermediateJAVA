@@ -76,7 +76,6 @@ public class HeroDAO implements DAO {
 		}
 	}
 
-	//删除
 	//根据ID删除
 	public void delete(int id) {
 		String sql = "delete from hero where id = ?";
@@ -92,8 +91,6 @@ public class HeroDAO implements DAO {
 		}
 	}
 	
-	//更新
-
 	//更新
 	public void update(Hero hero) {
 		String sql = "update hero set name = ?, hp = ?, damage = ? where id = ?";
@@ -115,8 +112,6 @@ public class HeroDAO implements DAO {
 			e.printStackTrace();
 		}
 	}
-	
-	//获取
 	
 	//获取相应ID的hero对象
 	public Hero get(int id) {
@@ -147,7 +142,9 @@ public class HeroDAO implements DAO {
 		return hero;
 	}
 	
-	//分页输出
+	public List<Hero> list() {
+		return list(0, Short.MAX_VALUE);
+		}
 
 	//分页输出列表中hero对象
 	public List<Hero> list(int start,int count) {
