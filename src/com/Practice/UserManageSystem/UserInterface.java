@@ -110,14 +110,14 @@ public class UserInterface {
 		UpdatePanel.add(labIdTip);
 		UpdatePanel.add(labId);
 		//第二行——用户名输入
-		JLabel labNameUpdate = new JLabel("用户名：");
+		JLabel labNameUpdate = new JLabel("新用户名：");
 		labNameUpdate.setBounds(20, 40, 70, 30);
 		JTextField tfNameUpdate = new JTextField();
 		tfNameUpdate.setBounds(90, 40, 150, 30);
 		UpdatePanel.add(labNameUpdate);
 		UpdatePanel.add(tfNameUpdate);
 		//第三行——密码输入
-		JLabel labPasswordUpdate = new JLabel("密码：");
+		JLabel labPasswordUpdate = new JLabel("新密码：");
 		labPasswordUpdate.setBounds(20, 70, 70, 30);
 		JTextField tfPasswordUpdate = new JTextField();
 		tfPasswordUpdate.setBounds(90, 70, 150, 30);
