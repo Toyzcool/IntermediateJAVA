@@ -236,9 +236,6 @@ public class UserInterface {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				UpdateFrame.setVisible(true);
-				UserDAO userDao = new UserDAO();
-				User userUpdate = new User();
 				//获取选中的项
 				int selectInt = tableDisplay.getSelectedRow();
 				//判断是否选中的特定行
@@ -246,6 +243,9 @@ public class UserInterface {
 					JOptionPane.showMessageDialog(frame, "请选择要修改的项目");
 					return;
 				}
+				UpdateFrame.setVisible(true);
+				UserDAO userDao = new UserDAO();
+				User userUpdate = new User();
 				//获取选中行的id值
 				int selectId = (int) tableDisplay.getValueAt(selectInt,0);
 				String labIdString = selectId+"";
